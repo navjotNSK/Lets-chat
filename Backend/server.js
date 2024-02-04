@@ -1,11 +1,21 @@
  const express = require("express");
+ const dotenv = require("dotenv");
+ const chats = require("./data/data")
 
  const app =express();
- app.listen(8080 , console.log("Running on 8080"));
+ dotenv.config(); 
+ const PORT  = process.env.PORT || 8000 ;
 
- app.get("/",(req,res)=>{
+ app.listen(PORT , console.log(`Running on ${PORT}`));
+
+ app.get("/api/chat",(req,res)=>{
     print("running");
- res.send("API is running");
+ res.send(chats);
+ });
+
+ app.get("/api/chat/:id",(req,res)=>{
+    print("running");
+    res.send(chats.find((c)=>c._id === req.params.id ));
  });
 
  const print = (number) => console.log(number); 
