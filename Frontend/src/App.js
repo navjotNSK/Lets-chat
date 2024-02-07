@@ -21,11 +21,11 @@ import { Button } from "@chakra-ui/react";
   return (
     
     <div className="App">
-      <div>
+    <div>
     <Button colorScheme='blue'>Button</Button>
     </div>
       <Routes>
-      <Route path="/home" element={<Homepage />}  exact />
+      <Route path="/home" element={<Homepage/>}  exact />
       <Route path="/chats" element={<Chatpage/>} />
       </Routes>
     </div>

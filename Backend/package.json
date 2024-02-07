@@ -4,8 +4,8 @@
   "description": "Chat Application",
   "main": "server.js",
   "scripts": {
-    "test": "node backend/server.js",
-    "start": "node backend/server.js"
+    "test": "node server.js",
+    "start": "node server.js"
   },
   "author": "Navjot Singh",
   "license": "ISC",
